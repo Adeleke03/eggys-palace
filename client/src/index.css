@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import 'animate.css';
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: "Red Hat Text", sans-serif;
+
+}
+
+.modal-open dialog {
+  /* display: block !important; */
+}
+
+@theme {
+  --font-Rammetto-one: "Rammetto One", sans-serif; 
+}
+
+.wrapper{
+  @apply w-full mx-auto  px-[14px] md:px-[40px] py-[10px] lg:px-[80px] xl:px-[80px] lg:py-[16px] 
+  /* @apply w-full mx-auto px-[20px] md:px-[40px] py-[10px] lg:px-[90px] xl:px-[130px] lg:py-[16px]; */
+
+}
+
