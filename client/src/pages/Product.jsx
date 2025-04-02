@@ -7,7 +7,7 @@ import CartContext from "../context/CartContext";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
 import rateIcon from "../assets/rating-icon.svg";
-import { allProducts } from "../../../server/controllers/productController";
+// import { allProducts } from "../../../server/controllers/productController";
 const baseUrl = import.meta.env.VITE_API_URL;
 
 const Product = () => {
