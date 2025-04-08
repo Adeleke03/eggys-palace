@@ -6,6 +6,8 @@ import rateIcon from "../assets/rating-icon.svg";
 import MyButton from './MyButton';
 import { toast } from "sonner";
 
+const baseUrl = import.meta.env.VITE_API_URL
+
 const SimilarProducts = () => {
   const { handleAddToCart, cart } = useContext(CartContext);
   const [isLoading, setIsLoading] = useState(false);
