@@ -19,7 +19,7 @@ const Menu = () => {
   async function getMenu() {
     try {
       setIsLoading(true)
-      const req = await fetch(`${baseUrl}/all-products`);
+      const req = await fetch(`${baseUrl}/api/product/all-products`);
       const res = await req.json();
       console.log(res.products);
       setMenuItems(res.products);

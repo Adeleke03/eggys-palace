@@ -8,7 +8,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signInSchema } from "../utils/ValidationSchema";
 import {toast } from "sonner";
-import LoadingRing from "../utils/Loader"
+import LoadingRing from "../utils/Loader";
+
+const baseUrl = import.meta.env.VITE_API_URL
 
 const SignIn = ({ switchToSignUp }) => {
   const [isReveal, setIsReveal] = useState(false)
@@ -28,7 +30,7 @@ const SignIn = ({ switchToSignUp }) => {
     {
           // setIsClicked(true)
           try {
-            const req = await fetch("http://localhost:4040/api/auth/sign-in", {
+            const req = await fetch(`${baseUrl}/api/auth/sign-in`, {
               method:"POST",
               headers:{
                 "Content-Type":"application/json"

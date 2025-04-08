@@ -17,7 +17,7 @@ const SimilarProducts = () => {
   const fetchSimilarProducts = async () => {
     try {
       setIsLoading(true);
-      const req = await fetch(`${baseUrl}/all-products`);
+      const req = await fetch(`${baseUrl}/api/product/all-products`);
       const res = await req.json();
       setMenuItems(res.products);
     } catch (error) {

@@ -9,6 +9,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { signUpSchema } from "../utils/ValidationSchema";
 import {toast } from "sonner";
 import LoadingRing from "../utils/Loader"
+
+const baseUrl = import.meta.env.VITE_API_URL
 const SignUp = ({switchToSignIn}) => {
    const [isReveal, setIsReveal] = useState(false)
    const [isReveal2, setIsReveal2] = useState(false);
@@ -31,7 +33,7 @@ const SignUp = ({switchToSignIn}) => {
     const onSubmit = async (data) =>{
       // setIsClicked(true)
       try {
-        const req = await fetch("http://localhost:4040/api/auth/sign-in", {
+        const req = await fetch(`${baseUrl}/api/auth/sign-in`, {
           method:"POST",
           headers:{
             "Content-Type":"application/json"

@@ -20,11 +20,11 @@ const Product = () => {
   const fetchProduct = async () => {
     try {
       setIsLoading(true);
-      const req = await fetch(`${baseUrl}/${productId}`);
+      const req = await fetch(`${baseUrl}/api/product/${productId}`);
       const res = await req.json();
       setProduct(res.product);
 
-      const allProducts = await fetch(`${baseUrl}/all-products`);
+      const allProducts = await fetch(`${baseUrl}/api/product/all-products`);
       const allProductsData = await allProducts.json();
       const filteredSimilarProducts = allProductsData.products.filter(
         (item) => item.category === res.product.category && item._id !== res.product._id
