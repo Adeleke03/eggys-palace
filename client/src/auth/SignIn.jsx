@@ -30,7 +30,7 @@ const SignIn = ({ switchToSignUp }) => {
     {
           // setIsClicked(true)
           try {
-            const req = await fetch(`${baseUrl}/api/auth/sign-in`, {
+            const req = await fetch(`https://eggys-palace.onrender.com/api/auth/sign-in`, {
               method:"POST",
               headers:{
                 "Content-Type":"application/json"

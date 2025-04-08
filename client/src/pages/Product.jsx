@@ -20,7 +20,7 @@ const Product = () => {
   const fetchProduct = async () => {
     try {
       setIsLoading(true);
-      const req = await fetch(`${baseUrl}/api/product/${productId}`);
+      const req = await fetch(`https://eggys-palace.onrender.com/api/product/${productId}`);
       const res = await req.json();
       setProduct(res.product);
 
