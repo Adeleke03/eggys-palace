@@ -12,6 +12,7 @@ import LocationModal from "./components/modals/LocationModal";
 import ResetPwd from "./auth/ResetPwd";
 import ForgotPwd from "./auth/ForgotPwd"
 import ErrorPage from "./pages/ErrorPage";
+import Checkout from "./pages/Checkout";
 
 
 // const cartItemsFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || []
@@ -96,6 +97,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/product/:productId" element={<Product />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/cart/checkout" element={<Checkout/>} />
             </Route>
             <Route path="/reset-password" element={<ResetPwd/>}/>
             <Route path="/forgot-password" element={<ForgotPwd/>}/>

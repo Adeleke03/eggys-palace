@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import CartContext from "../../context/CartContext";
 import MyButton from "../../components/MyButton";
 import { calculateTotalPrice } from "../../utils/CartUtils";
@@ -43,12 +44,13 @@ const CartSummary = () => {
           </p>
         </div>
       </div>
-      <div className="mt-4">
+      <Link to="checkout" > <div className="mt-4">
         <MyButton
           text="Check Out"
           className="w-full h-[56px] text-[20px] font-[500] "
         />
-      </div>
+      </div></Link>
+     
     </section>
   );
 };
