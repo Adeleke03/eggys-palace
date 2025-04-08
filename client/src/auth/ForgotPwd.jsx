@@ -24,7 +24,7 @@ const ForgotPwd = () => {
 
   const handleForgotPwd = async (data) => {
     try { 
-      const  req = await fetch(`https://eggys-place-5gn6.onrender.com9/api/auth/forgot-password`,{
+      const  req = await fetch(`https://eggys-place-5gn6.onrender.com/api/auth/forgot-password`,{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -40,7 +40,10 @@ const ForgotPwd = () => {
         toast.success(res.message)
       }
       
-    } catch (error) {}
+    } catch (error) {
+      console.log(error.message);
+      
+    }
   };
   const btnText = isSubmitting ? <LoadingRing/> : "Forgot Password"
   return (
